@@ -1,0 +1,59 @@
+.bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+            135deg,
+            var(--white) 0%,
+            var(--pink-soft) 45%,
+            var(--blue-soft) 100%
+    );
+}
+
+/* Контейнер для сердечок (наповнює js/hearts.js) */
+.hearts {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+/* Сердечко: форма через маску, колір задає JS через --c */
+.heart {
+    position: absolute;
+    top: 100%;
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--c);
+    opacity: 0;
+
+    -webkit-mask: var(--heart-shape) center / contain no-repeat;
+    mask: var(--heart-shape) center / contain no-repeat;
+
+    animation: heart-rise var(--dur) linear var(--delay) infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes heart-rise {
+    0% {
+        transform: translate(0, 0) rotate(var(--rot));
+        opacity: 0;
+    }
+    10%, 85% {
+        opacity: var(--op);
+    }
+    100% {
+        transform: translate(var(--drift), -125vh) rotate(calc(var(--rot) * -1));
+        opacity: 0;
+    }
+}
+
+/* Без анімації: сердечка просто розсипані по фону */
+@media (prefers-reduced-motion: reduce) {
+    .heart {
+        top: var(--y);
+        animation: none;
+        opacity: var(--op);
+        transform: rotate(var(--rot));
+    }
+}

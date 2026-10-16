@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Нам пів року 💗</title>
+
+    <!-- Тимчасово шрифти з Google Fonts, потім перенесемо в assets/fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Pacifico&display=swap&subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/glass.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/falling.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/message.css">
+    <link rel="stylesheet" href="css/pixel-heart.css">
+
+    <script type="module" src="js/counters.js" defer></script>
+    <script type="module" src="js/gallery.js" defer> </script>
+    <script type="module" src="js/hearts.js" defer></script>
+    <script type="module" src="js/falling.js" defer></script>
+    <script type="module" src="js/message.js" defer></script>
+    <script type="module" src="js/pixel-heart.js" defer></script>
+</head>
+<body>
+
+<!-- Фон: градієнт -->
+<div class="bg" aria-hidden="true">
+    <div class="hearts"></div>
+</div>
+
+<!-- Шапка на весь екран -->
+<header class="hero">
+    <div class="hero__panel glass">
+
+        <h1 class="hero__title">Ми разом:</h1>
+
+        <!-- Для скрінрідерів -->
+        <p class="sr-only">Ми разом: 6 місяців, 183 дні, 4392 години, 15 811 200 секунд.</p>
+
+        <!-- В HTML одразу фінальні числа -->
+        <ul class="counters" aria-hidden="true">
+            <li class="counter" style="--digits: 1">
+                <span class="counter__value" data-unit="months">6</span>
+                <span class="counter__label">місяців</span>
+            </li>
+            <li class="counter" style="--digits: 3">
+                <span class="counter__value" data-unit="days">183</span>
+                <span class="counter__label">днів</span>
+            </li>
+            <li class="counter" style="--digits: 4">
+                <span class="counter__value" data-unit="hours">4392</span>
+                <span class="counter__label">годин</span>
+            </li>
+            <li class="counter" style="--digits: 8">
+                <span class="counter__value" data-unit="seconds">15811200</span>
+                <span class="counter__label">секунд</span>
+            </li>
+        </ul>
+
+        <a class="scroll-down" href="#cards" aria-label="Прокрутити вниз">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none"
+                 stroke="currentColor" stroke-width="2.5"
+                 stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </a>
+
+    </div>
+</header>
+
+<!-- Основна сторінка (поки порожня) -->
+<main id="cards">
+    <section class="cards-grid">
+
+        <article class="card card--gallery glass">
+
+            <!-- Ліва частина: текст -->
+            <div class="card__text">
+                <h2 class="card__title">З МІСЯЧНИНОЮ!!</h2>
+                <p>
+                    Кицюнічка! В цей день нашим відносинам пів року. Пів року тому ми почали зустрічатись і я ще дуже довго не міг
+                    повірити, що це правда. Не передати словами те, як сильно я кохаю тебе, і я твердо переконаний,
+                    що кохатиму тебе не менше й через 10, й через 20, й навіть через 100 років. Я дуже вдячний тобі за те,
+                    що ти в мене є, і дуже сподіваюсь, що в нас все завжди буде добре (ну і робитиму все для цього, звісно).
+                </p>
+                <p>
+                    І хоча за цей час в нас були сварки й непорозуміння, особливо сьогодні, я хочу, щоб ти завжди пам'ятала,
+                    як багато ти для мене означаєш і наскільки ти важлива для мене. Я хочу, щоб в тебе зі мною завжди
+                    були хороші спогади, і ось декілька з них (тут ти тіпа маєш подивитись на фотки справа).
+                </p>
+                <p>
+                    Вітаю тебе з майже річницею, моє сонечко. Пам'ятай, що я нереально сильно
+                    люблю тебе і, без сумніву, любитиму завжди 💗💗
+                </p>
+            </div>
+
+            <!-- Права частина: колода з кнопками -->
+            <div class="gallery">
+                <div class="deck" role="group" aria-roledescription="колода фото" aria-label="Фотогалерея"></div>
+
+                <div class="gallery__controls">
+                    <button class="arrow" type="button" data-dir="prev" aria-label="Попереднє фото">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 6 9 12 15 18"></polyline>
+                        </svg>
+                    </button>
+
+                    <p class="gallery__counter" aria-live="polite">
+                        <span class="gallery__current">1</span> / <span class="gallery__total">30</span>
+                    </p>
+
+                    <button class="arrow" type="button" data-dir="next" aria-label="Наступне фото">
+                        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor"
+                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 6 15 12 9 18"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+        </article>
+
+        <article class="card card--leaves glass">
+
+            <!-- Ліва частина: текст -->
+            <div class="card__text">
+                <h2 class="card__title">До речі</h2>
+                <p>
+                    Ми постійно кажемо одне одному, як сильно хочемо з'їхатись, щоб нарешті жити разом,
+                    і як сильно нам обом хочеться засинати й просинатись в обіймах одне одного.
+                </p>
+                <p>
+                    Але дещо з цього вже траплялось. За ці пів року ми спали (не те, що ти подумала)
+                    один перед одним близько 40 разів! Це як прожити разом півтора місяця. Але є нюанс:
+                </p>
+
+                <div class="stats">
+                    <p class="stat">
+                        <span class="stat__label">Я при тобі:</span>
+                        <span class="stat__value">~40</span>
+                    </p>
+                    <p class="stat">
+                        <span class="stat__label">Ти при мені:</span>
+                        <span class="stat__value">3</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Права частина: гіфка і листя -->
+            <div class="leaves">
+                <!-- Мінікартки створює js/falling.js -->
+                <figure class="gif-frame">
+                    <img src="assets/gifs/1.gif" alt="Гіфка">
+                </figure>
+            </div>
+
+        </article>
+
+        <article class="card card--heart glass">
+
+            <!-- Ліва частина: текст -->
+            <div class="card__text">
+                <h2 class="card__title">І ще одне</h2>
+                <p>
+                    Я знаю як ти відносишся до самої себе, як часто ти переживаєш, що недостатньо гарна,
+                    чи ще щось. Але я хочу, щоб ти знала і завжди пам'ятала про те, що в моїх очах ти завжди
+                    будеш найпрекраснішою дівчиною в цілому всесвіті, і краще тебе знайти просто неможливо.
+                </p>
+                <p>
+                    Понад усе я хочу, щоб ти перестала перейматись через те, що ти не ідеальна, адже у кожного є свої проблеми.
+                    І я допоможу тобі подолати твої проблеми, а ти допомагатимеш мені подолати мої.
+                    Дякую за все, що робиш для мене. Дякую за те, що ти в мене є.
+                </p>
+
+                <p class="scroll-hint">Люблю тебе, моя зірочко, вітаю з місячниною!</p>
+            </div>
+
+            <!-- Права частина: сердечко (плитки створює js/pixel-heart.js) -->
+            <div class="pixel-heart" role="img" aria-label="Сердечко, складене з наших фотографій"></div>
+
+        </article>
+
+        <article class="card card--message glass">
+
+            <!-- Стан 1: повідомлення -->
+            <div class="message__state" data-state="start">
+                <span class="message__icon" aria-hidden="true">💌</span>
+                <h2 class="card__title">Тобі прийшло повідомлення</h2>
+                <button class="btn" type="button" data-action="read">Прочитати</button>
+            </div>
+
+            <!-- Стан 2: запрошення -->
+            <div class="message__state" data-state="invite" hidden>
+                <h2 class="card__title" tabindex="-1">Запрошення на побачення</h2>
+                <p class="message__text">
+                    Моє сонечко, хочу запросити тебе на побачення сьогодні на честь нашої місячнини❤️💕
+                </p>
+                <div class="message__actions">
+                    <a class="btn" href="date.html">Погодитись</a>
+                    <button class="btn btn--inactive" type="button"
+                            aria-disabled="true" data-action="decline">Відмовитись</button>
+                </div>
+            </div>
+
+        </article>
+
+    </section>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--text);
+    line-height: 1.5;
+    background: var(--milk);
+}
+
+h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul { list-style: none; }
+
+a { color: inherit; }
+
+/* Текст лише для скрінрідерів */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+[hidden] {
+    display: none !important;
+}

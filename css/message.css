@@ -1,0 +1,45 @@
+.card--message {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 760px);
+    text-align: center;
+}
+
+.message__state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 3vh, 1.75rem);
+    animation: message-in 0.5s ease both;
+}
+
+.message__state .card__title:focus {
+    outline: none;   /* фокус ставить JS після перемикання */
+}
+
+.message__icon {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+}
+
+.message__text {
+    max-width: 34ch;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    line-height: 1.6;
+}
+
+.message__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+@keyframes message-in {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .message__state { animation: none; }
+}

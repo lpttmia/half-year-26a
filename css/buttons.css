@@ -1,0 +1,48 @@
+.btn {
+    display: inline-block;
+    padding: 0.8em 1.9em;
+    font: inherit;
+    font-weight: 800;
+    font-size: clamp(1rem, 1.6vw, 1.2rem);
+    text-decoration: none;
+    color: var(--text);
+    background: linear-gradient(135deg, var(--pink), #ffb3d1);
+    border: 0;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(255, 143, 184, 0.45);
+    cursor: pointer;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: default;
+    transform: none;
+}
+
+/* Виглядає неактивною і ніяк не реагує візуально */
+.btn--inactive,
+.btn--inactive:hover,
+.btn--inactive:active,
+.btn--inactive:focus,
+.btn--inactive:focus-visible {
+    color: rgba(91, 58, 74, 0.4);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: none;
+    filter: none;
+    transform: none;
+    outline: none;
+    cursor: default;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}

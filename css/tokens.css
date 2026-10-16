@@ -1,0 +1,32 @@
+:root {
+    /* Кольори */
+    --white: #ffffff;
+    --milk: #fffafc;
+    --pink-soft: #ffd6e7;
+    --pink: #ff8fb8;
+    --blue-soft: #cfe9ff;
+    --blue: #7cc4ff;
+    --text: #5b3a4a;
+
+    /* Шрифти */
+    --font-body: "Nunito", system-ui, sans-serif;
+    --font-title: "Pacifico", cursive;
+
+    /* Скло */
+    --glass-bg: rgba(255, 255, 255, 0.3);
+    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-shadow: 0 8px 32px rgba(255, 143, 184, 0.25);
+    --glass-blur: 16px;
+    --radius: 28px;
+
+    /* Відступи */
+    --gap: clamp(1rem, 3vw, 2.5rem);
+
+    /* Форма сердечка для маски (js/hearts.js) */
+    --heart-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s-7.5-4.6-10-9.5C.4 8 2.3 4 6 4c2.2 0 3.8 1.2 6 3.5C14.2 5.2 15.8 4 18 4c3.7 0 5.6 4 4 7.5C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E");
+
+    /* Змінні, які виставляє js/pixel-heart.js */
+    --col: 1;
+    --row: 1;
+    --total: 3s;
+}
